@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<header>
+    <a href="menu" title="Main menu">Меню</a>
+    <a href="registration" title="Registration">Регистрация</a>
+    <a href="login" title="log in">Войти</a>
+</header>
+<body>
+<a href="http://www.kubsu.ru/index.php">Абсолютная гиперссылка на главную страницу сайта КубГУ</a>
+<a href="https://www.kubsu.ru/index.php">Абсолютная гиперссылка на главную страницу сайта КубГУ в протоколе https</a>
+<li class="link__menu__item">Ссылка-изображение<br>
+    <a href="https://github.com/dont-damn-me/web_classes"><img src="image.jpg" width="200" height="200" alt="Описание картинки"></a>
+</li>
+
+<ol>
+    <h1>Title</h1>
+    <li><a href="/pages/page" title="pages">Сокращенная ссылка на внутреннюю</a></li>
+    <li><a href="/" title="main">Сокращенная ссылка на главную</a></li>
+    <li><a href="http://github.com?parameter1=p1&amp;parameter2=2&amp;parameter3=p3" title="three parameters">Ссылка с тремя параметрами URL</a></li>
+    <li><a href="http://github.com?id=1003930" title="id">Ссылка с параметром id в URL</a></li>
+    <li><a href="#text" title="fragment">Ссылка на фрагмент текущей страницы</a></li>
+</ol>
+<ul>
+    <li><a href="page">Относительная ссылка на страницу в текущем каталоге</a></li>
+    <li><a href="./about/page">Относительная ссылка на страницу в каталоге about</a></li>
+    <li><a href="../page">Относительная ссылка на страницу в каталоге уровнем выше текущего</a></li>
+    <li><a href="../../page">Относительная ссылка на страницу в каталоге двумя уровнями выше текущего</a></li>
+</ul>
+
+<ul>
+    <li class="link__menu__item">
+        <p>Контекстная <a href="https://github.com/dont-damn-me/web_classes" style="display: inline-block">ссылка</a> в тексте абзаца</p>
+    </li>
+    <li>
+        <a href="https://github.com/dont-damn-me/web_classes#files">Ссылка на фрагмент стороннего сайта</a>
+    </li>
+</ul>
+
+<ul>
+    <li>
+        Ссылки из прямоугольных и круглых областей картинки<br>
+        <img src="image.jpg" width="310" height="242" alt="Описание картинки" usemap="#mymap">
+        <map name="mymap">
+            <area shape="rect" coords="40,25,90,150" href="image.jpg" alt="Прямоугольная область">
+            <area shape="circle" coords="100,210,25" href="image.jpg" alt="Круглая область">
+        </map></li>
+</ul>
+<ul>
+    <li>
+        <a href="">Ссылка с пустым href</a>
+    </li>
+    <li>
+        <a>Ссылка без href</a>
+    </li>
+    <li><a href="http://2ch.hk" rel="nofollow">Ссылка, по которой запрещен переход поисковикам</a></li>
+    <li><a href="https://github.com" rel="nofollow">
+        <!--noindex-->Ссылка, запрещенная для индексации поисковиками
+        <!--/noindex-->
+    </a></li>
+    <li><a href="ftp://user:228@2ch.hk/files.file.html">Ссылку на файл на сервере FTP с авторизацией</a></li>
+</ul>
+
+<p>
+    <a id="text"></a>
+    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum nulla provident quibusdam recusandae saepe sit voluptatem? Adipisci assumenda, debitis molestias odio quam quidem. Adipisci eos esse minus non qui unde?</span><span>Aliquam, deserunt distinctio eos ex exercitationem facilis illo impedit ipsam laborum, libero magnam nam nisi pariatur quam quidem rerum soluta veritatis! Cumque dolor excepturi nihil perferendis quod recusandae sint! Accusantium!</span><span>Accusamus ad adipisci dicta expedita harum impedit iusto maiores minima minus molestiae quam quibusdam ratione rem, sed tenetur totam vitae! A aliquam distinctio iste nobis odit rem. Aspernatur, debitis vero?</span><span>Aliquid beatae cum eos, ex fugiat, fugit harum laudantium odio pariatur quae similique sint sit suscipit, veritatis vitae. Alias aspernatur dicta dolorem illum in mollitia porro quia sapiente sit sunt.</span><span>Ad, aliquid at delectus eaque iste neque nihil nobis obcaecati omnis suscipit? A accusantium aliquam beatae cumque dicta, eum illum incidunt, molestias officia praesentium, provident quasi quia sapiente tempora voluptate.</span>
+</p>
+
+<form action="/" method="post" style="display: inherit">
+    <label for="name">ФИО</label>
+    <input type="text" name="ФИО" id="name">
+    <label for="phone">Телефон</label>
+    <input type="text" id="phone">
+    <label for="birth">Дата рождения</label>
+    <input type="date" id="birth">
+    <span>Пол</span>
+    <input type="radio" name="state" id="male" value="Мужской">
+    <label for="male">Мужской</label>
+    <input type="radio" name="state" id="female" value="Женский">
+    <label for="female">Женский</label><br><br>
+    <label for="lang">Любимый язык программирования</label>
+    <select name="lang[]" id="lang" multiple="multiple">
+        <option value="">Python</option>
+        <option value="">C++</option>
+        <option value="">TypeScript</option>
+        <option value="">Swift</option>
+        <option value="">Java</option>
+        <option value="">Assembly</option>
+        <option value="">Go</option>
+        <option value="">PHP</option>
+    </select>
+    <label for="biography">Биография</label>
+    <textarea name="" id="biography" cols="30" rows="10"></textarea>
+    <label for="terms-argree">С контрактом ознакомлен</label>
+    <input type="checkbox" id="terms-argree">
+    <button type="submit">Сохранить</button>
+</form>
+</body>
+</html>
